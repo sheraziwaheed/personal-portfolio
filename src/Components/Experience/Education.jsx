@@ -48,13 +48,36 @@ export default function App() {
                 Internship - The Code Genesis DHA Lahore
               </h3>
             </div>
-            <p className="mb-2 text-yellow-400">2024</p>
+            <p className="mb-2 text-yellow-400">05-2025 08-2025</p>
             <p className="text-sm leading-relaxed text-gray-300">
               Completed an internship, gaining experience in practical software
               development and corporate workflows.
             </p>
           </div>
+
+          {/* card 3 */}
+
+          {/* card 3 */}
+
+<div className="mt-8 bg-[#111a2c] p-6 rounded-2xl shadow-lg border-l-4 border-yellow-400 hover:scale-[1.02] transition-all duration-300">
+  <div className="flex items-center gap-3 mb-2">
+    <div className="p-3 text-xl text-black bg-yellow-400 rounded-full">
+      💼
+    </div>
+    <h3 className="text-lg font-bold">
+      JOB Preesoft - Johar Town Lahore
+    </h3>
+  </div>
+  <p className="mb-2 text-yellow-400">Present</p>
+  <p className="text-sm leading-relaxed text-gray-300">
+    Currently working as a Frontend Developer, building responsive and scalable web applications while following modern development practices
+  </p>
+</div>
         </div>
+
+        
+
+        
 
         {/* Right Section - Academic Background */}
         <div>

@@ -1,31 +1,42 @@
 import React, { useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+const [isLoading, setIsLoading] = useState(false);
 
 export default function ContactSection() {
   const [isSent, setIsSent] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const formData = new FormData(e.target);
+ const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    try {
-      const response = await fetch("https://formspree.io/f/yourFormID", {
-        method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" },
-      });
+  setIsLoading(true); // 🔄 start loading
 
-      if (response.ok) {
-        setIsSent(true);
-        e.target.reset();
-        setTimeout(() => setIsSent(false), 4000); // Hide alert after 4 seconds
-      } else {
-        alert("Message Has Been Sent");
-      }
-    } catch (error) {
-      alert("Error sending message. Please check your internet connection.");
+  const formData = new FormData(e.target);
+
+  formData.append("access_key", "e63fce47-f69e-405a-bc73-db9c468cc9ae");
+  formData.append("subject", "New Message from Portfolio");
+  formData.append("from_name", "Sherazi Portfolio");
+
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setIsSent(true);
+      e.target.reset();
+      setTimeout(() => setIsSent(false), 4000);
+    } else {
+      alert("Something went wrong!");
     }
-  };
+  } catch (error) {
+    alert("Error sending message.");
+  } finally {
+    setIsLoading(false); // 🔚 stop loading
+  }
+};
 
   return (
     <section
@@ -83,12 +94,17 @@ export default function ContactSection() {
               className="w-full bg-[#1e2a38] p-3 rounded-md border border-gray-700 focus:outline-none focus:border-yellow-400 resize-none"
               required
             ></textarea>
-            <button
-              type="submit"
-              className="w-full py-3 font-semibold text-black transition-all duration-300 bg-yellow-400 rounded-md hover:bg-yellow-500"
-            >
-              Send Message
-            </button>
+           <button
+  type="submit"
+  disabled={isLoading}
+  className="w-full py-3 font-semibold text-black transition-all duration-300 bg-yellow-400 rounded-md hover:bg-yellow-500 disabled:opacity-60"
+>
+  {isLoading
+    ? "Sending..."
+    : isSent
+    ? "Message Sent ✅"
+    : "Send Message"}
+</button>
           </form>
         </div>
 
