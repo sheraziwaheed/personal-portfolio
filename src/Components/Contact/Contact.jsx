@@ -1,42 +1,42 @@
 import React, { useState } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-const [isLoading, setIsLoading] = useState(false);
 
 export default function ContactSection() {
+  const [isLoading, setIsLoading] = useState(false);
   const [isSent, setIsSent] = useState(false);
 
- const handleSubmit = async (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  setIsLoading(true); // 🔄 start loading
+    setIsLoading(true); // 🔄 start loading
 
-  const formData = new FormData(e.target);
+    const formData = new FormData(e.target);
 
-  formData.append("access_key", "e63fce47-f69e-405a-bc73-db9c468cc9ae");
-  formData.append("subject", "New Message from Portfolio");
-  formData.append("from_name", "Sherazi Portfolio");
+    formData.append("access_key", "e63fce47-f69e-405a-bc73-db9c468cc9ae");
+    formData.append("subject", "New Message from Portfolio");
+    formData.append("from_name", "Sherazi Portfolio");
 
-  try {
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
 
-    const data = await response.json();
+      const data = await response.json();
 
-    if (data.success) {
-      setIsSent(true);
-      e.target.reset();
-      setTimeout(() => setIsSent(false), 4000);
-    } else {
-      alert("Something went wrong!");
+      if (data.success) {
+        setIsSent(true);
+        e.target.reset();
+        setTimeout(() => setIsSent(false), 4000);
+      } else {
+        alert("Something went wrong!");
+      }
+    } catch (error) {
+      alert("Error sending message.");
+    } finally {
+      setIsLoading(false); // 🔚 stop loading
     }
-  } catch (error) {
-    alert("Error sending message.");
-  } finally {
-    setIsLoading(false); // 🔚 stop loading
-  }
-};
+  };
 
   return (
     <section
@@ -51,14 +51,14 @@ export default function ContactSection() {
         </div>
       )}
       <header className="mb-8 text-center">
-          <h1 className="text-5xl font-extrabold tracking-tight">
-            <span className="text-white">Get In </span>
-            <span className="text-yellow-400">Touch</span>
-          </h1>
-          <div className="w-full max-w-3xl mx-auto mt-16">
-            <div className="h-1 bg-yellow-400 rounded-full" />
-          </div>
-        </header>
+        <h1 className="text-5xl font-extrabold tracking-tight">
+          <span className="text-white">Get In </span>
+          <span className="text-yellow-400">Touch</span>
+        </h1>
+        <div className="w-full max-w-3xl mx-auto mt-16">
+          <div className="h-1 bg-yellow-400 rounded-full" />
+        </div>
+      </header>
 
       <div className="grid max-w-6xl gap-10 mx-auto md:grid-cols-2">
         {/* ✅ Left Side - Form Section */}
@@ -94,17 +94,17 @@ export default function ContactSection() {
               className="w-full bg-[#1e2a38] p-3 rounded-md border border-gray-700 focus:outline-none focus:border-yellow-400 resize-none"
               required
             ></textarea>
-           <button
-  type="submit"
-  disabled={isLoading}
-  className="w-full py-3 font-semibold text-black transition-all duration-300 bg-yellow-400 rounded-md hover:bg-yellow-500 disabled:opacity-60"
->
-  {isLoading
-    ? "Sending..."
-    : isSent
-    ? "Message Sent ✅"
-    : "Send Message"}
-</button>
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="w-full py-3 font-semibold text-black transition-all duration-300 bg-yellow-400 rounded-md hover:bg-yellow-500 disabled:opacity-60"
+            >
+              {isLoading
+                ? "Sending..."
+                : isSent
+                  ? "Message Sent ✅"
+                  : "Send Message"}
+            </button>
           </form>
         </div>
 
@@ -115,9 +115,18 @@ export default function ContactSection() {
               Contact Information
             </h2>
             <div className="space-y-4 text-lg">
-              <p>📞 <span className="text-yellow-400">Phone:</span> +92 309 4876831</p>
-              <p>📧 <span className="text-yellow-400">Email:</span> sheraziwaheed4@gmail.com</p>
-              <p>📍 <span className="text-yellow-400">Location:</span> Lahore, PUNJAB, Pakistan</p>
+              <p>
+                📞 <span className="text-yellow-400">Phone:</span> +92 309
+                4876831
+              </p>
+              <p>
+                📧 <span className="text-yellow-400">Email:</span>{" "}
+                sheraziwaheed4@gmail.com
+              </p>
+              <p>
+                📍 <span className="text-yellow-400">Location:</span> Lahore,
+                PUNJAB, Pakistan
+              </p>
             </div>
           </div>
 
@@ -133,13 +142,12 @@ export default function ContactSection() {
                 <FaGithub />
               </a>
               <a
-              href="https://www.linkedin.com/in/sherazi-waheed-945962364/"   
+                href="https://www.linkedin.com/in/sherazi-waheed-945962364/"
                 rel="noopener noreferrer"
-                  className="transition-all duration-300 hover:-translate-y-1 hover:text-yellow-400"
-                 >
-                  <FaLinkedin />
-                 </a>
-
+                className="transition-all duration-300 hover:-translate-y-1 hover:text-yellow-400"
+              >
+                <FaLinkedin />
+              </a>
             </div>
           </div>
         </div>
