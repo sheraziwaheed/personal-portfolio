@@ -2,6 +2,7 @@
 import React, { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import profileImage from "../../assets/myimg.png";
 
 export default function HeroSection() {
   const particlesInit = useCallback(async (engine) => {
@@ -64,10 +65,10 @@ export default function HeroSection() {
             <div className="p-[2px] bg-gradient-to-br from-[#facc15] to-yellow-400 rounded-2xl">
               <div className="p-1 bg-white rounded-xl">
                 <img
-                  src="/Images/1.png"
-                  alt="profile"
-                  className="object-cover w-64 transition-transform duration-500 ease-out rounded-lg shadow-2xl h-72 sm:w-72 sm:h-80 md:w-80 md:h-96 grayscale group-hover:grayscale-0 group-hover:scale-105"
-                />
+  src={profileImage}
+  alt="Aman Waheed Profile"
+  className="object-cover w-64 transition-transform duration-500 ease-out rounded-lg shadow-2xl h-72 sm:w-72"
+/>
               </div>
             </div>
           </div>
@@ -76,7 +77,7 @@ export default function HeroSection() {
         {/* Right Content */}
         <div className="flex flex-col gap-6 text-center md:text-left">
           <h2 className="text-3xl font-extrabold sm:text-4xl md:text-5xl">
-            Hi, I&apos;m <span className="text-[#facc15]">Sherazi Waheed</span>
+            Hi, I&apos;m <span className="text-[#facc15]">Aman Waheed</span>
           </h2>
           <h3 className="text-xl font-semibold sm:text-2xl text-[#facc15]">
             Front-End Developer

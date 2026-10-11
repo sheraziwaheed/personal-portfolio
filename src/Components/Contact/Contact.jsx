@@ -14,7 +14,7 @@ export default function ContactSection() {
 
     formData.append("access_key", "e63fce47-f69e-405a-bc73-db9c468cc9ae");
     formData.append("subject", "New Message from Portfolio");
-    formData.append("from_name", "Sherazi Portfolio");
+    formData.append("from_name", "Aman Portfolio");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -116,12 +116,11 @@ export default function ContactSection() {
             </h2>
             <div className="space-y-4 text-lg">
               <p>
-                📞 <span className="text-yellow-400">Phone:</span> +92 309
-                4876831
+                📞 <span className="text-yellow-400">Phone:</span> +92 3271682826
               </p>
               <p>
                 📧 <span className="text-yellow-400">Email:</span>{" "}
-                sheraziwaheed4@gmail.com
+                amanwaheed284@gmail.com
               </p>
               <p>
                 📍 <span className="text-yellow-400">Location:</span> Lahore,
@@ -136,13 +135,13 @@ export default function ContactSection() {
             </h3>
             <div className="flex space-x-6 text-3xl">
               <a
-                href="https://github.com/sheraziwaheed"
+                href="https://github.com/amanwaheed284-dev"
                 className="transition-all duration-300 hover:-translate-y-1 hover:text-yellow-400"
               >
                 <FaGithub />
               </a>
               <a
-                href="https://www.linkedin.com/in/sherazi-waheed-945962364/"
+                href="https://www.linkedin.com/in/aman-waheed-0690a0395/"
                 rel="noopener noreferrer"
                 className="transition-all duration-300 hover:-translate-y-1 hover:text-yellow-400"
               >

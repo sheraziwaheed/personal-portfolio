@@ -45,10 +45,10 @@ export default function App() {
                 💼
               </div>
               <h3 className="text-lg font-bold">
-                Internship - The Code Genesis DHA Lahore
+                Internship - ReownLogics Lahore
               </h3>
             </div>
-            <p className="mb-2 text-yellow-400">05-2025 08-2025</p>
+            <p className="mb-2 text-yellow-400">July 2026 - September 2026</p>
             <p className="text-sm leading-relaxed text-gray-300">
               Completed an internship, gaining experience in practical software
               development and corporate workflows.
@@ -59,7 +59,7 @@ export default function App() {
 
           {/* card 3 */}
 
-<div className="mt-8 bg-[#111a2c] p-6 rounded-2xl shadow-lg border-l-4 border-yellow-400 hover:scale-[1.02] transition-all duration-300">
+{/* <div className="mt-8 bg-[#111a2c] p-6 rounded-2xl shadow-lg border-l-4 border-yellow-400 hover:scale-[1.02] transition-all duration-300">
   <div className="flex items-center gap-3 mb-2">
     <div className="p-3 text-xl text-black bg-yellow-400 rounded-full">
       💼
@@ -72,7 +72,7 @@ export default function App() {
   <p className="text-sm leading-relaxed text-gray-300">
     Currently working as a Frontend Developer, building responsive and scalable web applications while following modern development practices
   </p>
-</div>
+</div> */}
         </div>
 
         
@@ -94,7 +94,7 @@ export default function App() {
               </div>
               <h3 className="text-lg font-bold">
                 BS Software Engineering - Superior University Lahore <br />
-                2022-2026
+                2024-Present
               </h3>
             </div>
             <p className="mb-2 text-yellow-400"></p>
@@ -111,7 +111,7 @@ export default function App() {
                 🎓
               </div>
               <h3 className="text-lg font-bold">
-                Pre-Medical - Unique Girls College Lahore
+                ICS - Superior group of College Lahore
               </h3>
             </div>
             <p className="mb-2 text-yellow-400"></p>
