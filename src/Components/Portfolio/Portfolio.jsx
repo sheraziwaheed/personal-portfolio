@@ -4,31 +4,31 @@ export default function App() {
   const allProjects = [
     {
       id: 1,
-      title: "House of Lesther (E-commerce Store)",
-      image: "/Images/project-1.png",
+      title: "ReownLogics Website.png",
+      image: "/Images/RL web.png",
       tech: ["HTML", "CSS", "JAVASCRIPT" , "React" , "Tailwind CSS"],
       github: "",
-      live: "https://www.houseofleather.pk/",
+      live: "https://professional-portfolio-two-livid.vercel.app/",
       category: "Frontend",
     },
     {
       id: 2,
-      title: "Zenith Boarding Platform (Admin Panel + User Portal)",
-      image: "/Images/project-2.png",
+      title: "Nadeem Auto Website",
+      image: "/Images/My Port.png",
       tech: ["HTML", "Tailwind", "BOOTSTRAP",],
       github: "",
-      live: "https://zenithboarding.com/",
+      live: "https://nadeem-auto.vercel.app/",
       category: "Frontend",
     },
-    {
-      id: 3,
-      title: "Edu-Meeting",
-      image: "/Images/4.png",
-      tech: ["HTML", "Tailwind", "BOOTSTRAP", "CSS"],
-      github: "",
-      live: "https://education-meeting.vercel.app/",
-      category: "Frontend",
-    },
+    // {
+    //   id: 3,
+    //   title: "Edu-Meeting",
+    //   image: "/Images/4.png",
+    //   tech: ["HTML", "Tailwind", "BOOTSTRAP", "CSS"],
+    //   github: "",
+    //   live: "https://education-meeting.vercel.app/",
+    //   category: "Frontend",
+    // },
     // {
     //   id: 4,
     //   title: "Todo LocalStorage",
@@ -104,12 +104,12 @@ export default function App() {
       </div>
 
       {/* Projects Grid */}
-      <div className="grid max-w-6xl grid-cols-1 gap-8 px-6 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="flex flex-wrap justify-center max-w-6xl gap-8 px-6">
         {filtered.slice(0, visible).map((project) => (
           <div
-            key={project.id}
-            className="bg-[#111b2b] rounded-2xl overflow-hidden shadow-lg hover:shadow-yellow-400/40 transition-shadow duration-300"
-          >
+  key={project.id}
+  className="bg-[#111b2b] rounded-2xl overflow-hidden shadow-lg hover:shadow-yellow-400/40 transition-shadow duration-300 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.4rem)] max-w-md"
+>
             <img
               src={project.image}
               alt={project.title}

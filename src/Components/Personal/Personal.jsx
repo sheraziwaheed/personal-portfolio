@@ -28,20 +28,20 @@ export default function App() {
 
                 {/* Info grid */}
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  <InfoCard label="First Name" value="Sherazi" icon="👤" />
+                  <InfoCard label="First Name" value="Aman" icon="👤" />
                   <InfoCard label="Last Name" value="Waheed" icon="👔" />
-                  {/* <InfoCard label="Age" value="23 Years" icon="🎂" /> */}
+                  {/* <InfoCard label="Age" value="20 Years" icon="🎂" /> */}
                   <InfoCard label="Nationality" value="Pakistani" icon="🌍" />
                   <InfoCard label="Address" value="Lahore, PUNJAB, Pakistan" icon="📍" />
-                  {/* <InfoCard label="Phone" value="+92 3094876831" icon="📱" /> */}
-                  <InfoCard label="Email" value="sheraziwaheed4@gmail.com" icon="✉️" fullWidth />
+                  {/* <InfoCard label="Phone" value="+92 3271682826" icon="📱" /> */}
+                  <InfoCard label="Email" value="amanwaheed284@gmail.com" icon="✉️" fullWidth />
                   <InfoCard label="Languages" value="Urdu, English" icon="🗣️" />
                 </div>
 
                 {/* CV CTA */}
                 <div className="mt-6 text-center">
                   <a
-                    href="/Images/Sherazi-Waheed%20.pdf"
+                    href="/Images/AMAN CV.pdf"
                     target="_blank"
     rel="noopener noreferrer"
     className="w-full inline-flex flex-col items-center gap-2 px-6 py-4 border-2 border-yellow-400 rounded-lg bg-transparent hover:bg-yellow-400/10 transition-all transform hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(255,196,0,0.3)] focus:outline-none"
